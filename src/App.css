@@ -1,38 +1,160 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ html, body{
+  display: flex;
+ justify-content: center;
+ margin-top: 20px;
+  
+ }
+ .App{
+  height: fit-content;
   text-align: center;
-}
+  width: 350px;
+  box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+ }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+ .expense h2{
+  margin: 10px;
+ }
+ .container{
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 20px;
+ }
+
+ .balance h4{
+  text-align: justify;
+  text-transform: uppercase;
+  font-size: 14px;
+ }
+ .balance h1{
+  margin: 0px;
+  text-align: justify;
+  font-size: 34px;
+  font-weight: lighter;
+ }
+
+ .income-container{
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 14px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+ }
+
+ .income-container h4{
+  font-size: 20px;
+  margin: 0;
+  text-transform: uppercase;
+ }
+
+ .money-plus{
+  font-size: 20px;
+  margin-bottom: 0;
+  color: green;
+ }
+ .money-minus{
+  color: red;
+  font-size: 20px;
+ }
+
+ .transaction{
+  display: flex;
+  flex-direction: column;
+ }
+ .transaction h3{
+  text-align: justify;
+  padding: 5px;
+  margin: 5px;
+ }
+ hr{
+  font-size: 14px;
+ }
+
+ul{
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 5px 4px 0px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid transparent;
+  transition: border 0.3s;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+ul li:hover {
+  border: 1px solid #ccc; /* Change this to the desired border color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li:hover .delete-btn {
+  display: block;
+}
+
+.delete-btn {
+  display: none;
+  padding: 6px;
+  margin: 0;
+  font-weight: bolder;
+  cursor: pointer;
+  position: absolute;
+  left: -25px; /* Adjust this value as needed */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: red;
+  color: #fff;
+  border: none;
+}
+
+.add-transact{
+  display: flex;
+  flex-direction: column;
+}
+.add-transact h3{
+  text-align: justify;
+  margin: 5px;
+}
+label{
+  display: block;
+  text-align: justify;
+  font-size: 18px;
+}
+input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.btn{
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: rgb(8, 160, 211);
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
+
+.btn:hover{
+  background-color: rgb(23, 132, 168);
 }
